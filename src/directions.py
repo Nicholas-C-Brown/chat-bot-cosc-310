@@ -1,7 +1,6 @@
 from bs4 import BeautifulSoup
 import googlemaps
 from datetime import datetime
-from secrets import API_KEY
 
 # To enable directions add a google API key here
 gmaps = googlemaps.Client(key="")

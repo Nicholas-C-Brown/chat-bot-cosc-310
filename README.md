@@ -71,6 +71,8 @@ What kind of housing is available on campus?
 UBCO is home to 10 student residences including Cassiar, Kalamalka, Nicola, Purcell, Valhalla, Skeena, Nechako, Similkameen, Lower/Upper Cascades, and Monashee. You can learn more about the different residences at: https://okanagan.housing.ubc.ca/residences-rooms/residences/
 
 ### Directions using Google Direction API
+To use this feature, a valid Google API key must be added to `directions.py`.
+
 The file `directions.py` provides functionality to direct a user to UBCO from a given starting location.
 It will provide the user with explicit instructions as well as the expected time for each step.
 This feature only works within the Okanagan area.
