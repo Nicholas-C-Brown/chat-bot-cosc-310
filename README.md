@@ -43,6 +43,7 @@ The file `NER_func.py` analyzes the raw user text and identifies named entities 
 
 ### Spellchecker using symspellpy
 The file `spellchecker.py` provides the class which splits the conjoined words and corrects minor spelling mistakes. The file accepts raw text and returns the corrected version. Later, this corrected message is used to get the response from the bot. The bot gives more meaningful responses to the sentences which went through spell checking (as opposed to misspelled sentences which did not go through it), because it helps standardize the type of requests the bout usually receives.
+(This feature currently only works in English.)
 
    **Snippet with spellchecking disabled:**
     
@@ -51,6 +52,34 @@ The file `spellchecker.py` provides the class which splits the conjoined words a
    **Snippet with spellchecking enabled:**
 
    ![Spellchecking enabled](documentation/snippets/Spell_enabled.png)
+
+### Translation using googletrans (Google Translate API)
+The file `translation.py` provides functionality for translating sentences.
+It utilizes the Google Translate API to detect and translate output sentences into the same
+language as detected from the user input. 
+
+   **Snippet of French Translation:**
+    
+   ![French Translation](documentation/snippets/translation_example.png)
+
+English Translation:
+
+Hi, how can I help you today?
+
+What kind of housing is available on campus?
+
+UBCO is home to 10 student residences including Cassiar, Kalamalka, Nicola, Purcell, Valhalla, Skeena, Nechako, Similkameen, Lower/Upper Cascades, and Monashee. You can learn more about the different residences at: https://okanagan.housing.ubc.ca/residences-rooms/residences/
+
+### Directions using Google Direction API
+The file `directions.py` provides functionality to direct a user to UBCO from a given starting location.
+It will provide the user with explicit instructions as well as the expected time for each step.
+This feature only works within the Okanagan area.
+
+   **Directions to UBCO from Vernon:**
+    
+   ![Asking for Directions](documentation/snippets/direction_example1.png)
+   ![Receiving Directions](documentation/snippets/direction_example2.png)
+
 
 ### Graphical user interface using tkinter in Python
 The file `app_gui.py` creates a graphical interface for the chatbot which opens in a separate window. The graphical interface improves user experience by providing an intuitive way of talking to a bot.
